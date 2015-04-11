@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>10.0.0</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{23264257-9E06-4A18-9B22-14FD1B9F0BD3}</ProjectGuid>
+    <ProjectTypeGuids>{69878862-DA7D-4DC6-B0A1-50D8FAB4242F};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>Game2</RootNamespace>
+    <AssemblyName>Game2</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>none</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="Sce.PlayStation.Core" />
+    <Reference Include="Sce.PlayStation.HighLevel.UI" />
+    <Reference Include="Sce.PlayStation.HighLevel.GameEngine2D" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AppMain.cs" />
+    <Compile Include="Background.cs" />
+    <Compile Include="UiScene.cs" />
+    <Compile Include="Player.cs" />
+    <Compile Include="Platform.cs" />
+    <Compile Include="Managers\GameManager.cs" />
+    <Compile Include="Managers\AudioManager.cs" />
+    <Compile Include="Managers\SceneManager.cs" />
+    <Compile Include="Managers\TimerManager.cs" />
+    <Compile Include="GameoverScene.cs" />
+    <Compile Include="LevelScene.cs" />
+    <Compile Include="MenuScene.cs" />
+    <Compile Include="OptionScene.cs" />
+    <Compile Include="Sprite.cs" />
+    <Compile Include="LevelSelect.cs" />
+    <Compile Include="LevelSelect.composer.cs" />
+    <Compile Include="levelOne.cs" />
+    <Compile Include="levelOne.composer.cs" />
+    <Compile Include="level1.cs" />
+    <Compile Include="level1.composer.cs" />
+    <Compile Include="LevelSelectScene.cs" />
+    <Compile Include="ReadLevel.cs" />
+    <Compile Include="SaveLoadProfile.cs" />
+    <Compile Include="level3.cs" />
+    <Compile Include="level3.composer.cs" />
+    <Compile Include="level2.cs" />
+    <Compile Include="level2.composer.cs" />
+    <Compile Include="Collectable.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ShaderProgram Include="shaders\Sprite.fcg" />
+    <ShaderProgram Include="shaders\Sprite.vcg" />
+  </ItemGroup>
+  <ItemGroup>
+    <PsmMetadata Include="app.xml" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Sce\Sce.Psm.CSharp.targets" />
+  <ItemGroup>
+    <Folder Include="assests\" />
+    <Folder Include="assests\Textures\" />
+    <Folder Include="assests\Audio\" />
+    <Folder Include="assests\Sprites\" />
+    <Folder Include="Managers\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="assests\Textures\BackButton.png" />
+    <Content Include="assests\Textures\MenuBackground.png" />
+    <Content Include="assests\Textures\OptionsButton.png" />
+    <Content Include="assests\Textures\StartButton.png" />
+    <Content Include="assests\Textures\GameoverBackground.png" />
+    <Content Include="assests\Textures\RetryButton.png" />
+    <Content Include="assests\Textures\MenuButton.png" />
+    <Content Include="assests\Audio\Club_Diver.mp3" />
+    <Content Include="assests\Textures\cablesALTERED.png" />
+    <Content Include="assests\Textures\playerALTERED.png" />
+    <Content Include="assests\Textures\healthbarBack.png" />
+    <Content Include="assests\Textures\healthbarFront.png" />
+    <Content Include="assests\Textures\Platform.png" />
+    <Content Include="assests\Textures\backgroundEND.png" />
+    <Content Include="assests\Textures\backgroundL.png" />
+    <Content Include="assests\Textures\backgroundMist.png" />
+    <Content Include="assests\Textures\backgroundR.png" />
+    <Content Include="assests\Textures\backgroundOptions.png" />
+    <Content Include="assests\Textures\collectableTEMP.png" />
+    <Content Include="assests\Audio\ROCK_YOU.wav" />
+  </ItemGroup>
+</Project>
